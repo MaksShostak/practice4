@@ -1,7 +1,8 @@
-import { app } from 'services/firebase';
 import { ButtonGoogleAuth } from './ButtonGoogleAuth/ButtonGoogleAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import FormPost from './FormPost/FormPost';
+import UserList from './UserList/UserList';
 
 export const App = () => {
   return (
@@ -9,6 +10,7 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -16,6 +18,8 @@ export const App = () => {
       }}
     >
       <ButtonGoogleAuth />
+      <FormPost />
+      <UserList />
       <ToastContainer
         position="top-center"
         autoClose={1500}
